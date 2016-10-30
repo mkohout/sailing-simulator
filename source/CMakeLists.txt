@@ -1,0 +1,4 @@
+add_subdirectory(application_layer)
+add_subdirectory(game_logic)
+add_subdirectory(game_view)
+add_subdirectory(extern)
