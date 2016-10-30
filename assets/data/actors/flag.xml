@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <actor>
+        
+        <components>
+            <renderComponent>
+                <shader>
+                    <vertexShader source="default"></vertexShader>
+                    <fragmentShader source="default"></fragmentShader>
+                </shader>
+                <textures>
+                    <texture source="german_flag.png"></texture>
+                </textures>
+            </renderComponent>
+            <clothComponent>
+                <renderMaterial name="flag"></renderMaterial>
+                <totalMass value="1.0"></totalMass>
+                <constraintIterations value="10"></constraintIterations>
+                <damping value="-0.05"></damping>
+                <springs>
+                    <structural kd="-15.0f" ks="900.0f"></structural>
+                    <bending kd="-2.5f" ks="2.5f"></bending>
+                    <shearing kd="-2.5f" ks="2.5f"></shearing>
+                </springs>
+                <numParticles>
+                    <width value="5" />
+                    <height value="5" />
+                </numParticles>
+                <fixedPoints>
+                    <fixedPoint x="4" y="4" />
+                    <fixedPoint x="4" y="0" />
+                </fixedPoints>
+                <vertices>
+                    <vertex x="2.0" y="0.0" z="0" /> <!-- lower left -->
+                    <vertex x="0.0" y="0.0" z="0" /> <!-- upper left -->
+                    <vertex x="2.0" y="0.5" z="0" /> <!-- lower right -->
+                    <vertex x="0.0" y="0.5" z="0" /> <!-- upper right -->
+                </vertices>
+            </clothComponent>
+        </components>
+        
+    </actor>
+</root>

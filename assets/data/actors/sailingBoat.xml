@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+	<actor>
+			<components>
+                <physicsComponent>
+                    <shape type="mesh" source="hull.obj" radius="15"></shape>
+					<mass value="10000"></mass>
+                </physicsComponent>
+
+				<renderComponent>
+					<geometry source="boat.obj"></geometry>
+					<shader>
+						<vertexShader source="default"></vertexShader>
+						<fragmentShader source="default"></fragmentShader>
+					</shader>
+					<textures>
+						<texture source="boat.png"></texture>
+					</textures>
+				</renderComponent>
+				
+				<playerComponent>
+                    <rotationalSpeed>80000</rotationalSpeed>
+                    <keyLayout>
+                        <key action="steer_left" key="left" />
+                        <key action="steer_right" key="right" />
+                        <key action="increase_wind" key="." />
+                        <key action="decrease_wind" key="," />
+                        <key action="start_music" key="m" />
+                        <key action="remove_sheet_head_sail" key="k" />
+                    </keyLayout>
+                </playerComponent>
+				
+				<particleSystemComponent>
+
+					<offset>
+						<position x="10.0" y="0.0" z="-3.0"></position>
+					</offset>
+					<numberParticles value="1000"></numberParticles>
+					<texture value="particle.png"></texture>
+					<decayTime value="5.0"></decayTime>
+				</particleSystemComponent>
+			</components>
+	
+	</actor>
+</root>

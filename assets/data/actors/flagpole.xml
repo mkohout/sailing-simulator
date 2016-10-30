@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+	<actor>
+			<components>
+				<renderComponent>
+					<geometry source="flagpole.obj"></geometry>
+					<shader>
+						<vertexShader source="default"></vertexShader>
+						<fragmentShader source="default"></fragmentShader>
+					</shader>
+				</renderComponent>
+			</components>
+	</actor>
+</root>

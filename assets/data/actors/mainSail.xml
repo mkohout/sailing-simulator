@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <actor>
+        
+        <components>
+            <renderComponent>
+                <shader>
+                    <vertexShader source="default"></vertexShader>
+                    <fragmentShader source="default"></fragmentShader>
+                </shader>
+                <textures>
+                    <texture source="sail.png"></texture>
+                </textures>
+            </renderComponent>
+            <clothComponent>
+                <renderMaterial name="sail"></renderMaterial>
+                <totalMass value="17.325"></totalMass>
+                <constraintIterations value="10"></constraintIterations>
+                <damping value="-0.05"></damping>
+                <springs>
+                    <structural kd="-25.0f" ks="4500.0f"></structural>
+                    <bending kd="-25.0f" ks="25.0f"></bending>
+                    <shearing kd="-25.0f" ks="25.0f"></shearing>
+                </springs>
+                <numParticles>
+                    <width value="10" />
+                    <height value="10" />
+                </numParticles>
+                <fixedPoints>
+                    <fixedPoint x="0" y="0" />
+                    <fixedPoint x="0" y="9" />
+                    <fixedPoint x="9" y="0" />
+                    <fixedPoint x="9" y="1" />
+                    <fixedPoint x="9" y="2" />
+                    <fixedPoint x="9" y="3" />
+                    <fixedPoint x="9" y="4" />
+                    <fixedPoint x="9" y="5" />
+                    <fixedPoint x="9" y="6" />
+                    <fixedPoint x="9" y="7" />
+                    <fixedPoint x="9" y="8" />
+                    <fixedPoint x="9" y="9" />
+                </fixedPoints>
+                <vertices>
+                    <vertex x="3.1" y="6.2" z="0" /> <!-- lower left -->
+                    <vertex x="3.3" y="25.13" z="0" /> <!-- upper right -->
+                    <vertex x="-1.1" y="6.2" z="0" /> <!-- lower right -->
+                    <vertex x="3.30" y="25.09" z="0" /> <!-- upper left -->
+                </vertices>
+            </clothComponent>
+            <sailComponent>
+                <applyForceTo name="sailingBoat"></applyForceTo>
+            </sailComponent>
+        </components>
+        
+    </actor>
+</root>

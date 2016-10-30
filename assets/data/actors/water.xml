@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <actor>
+        <components>
+            <oceanComponent>
+				<resolution width="128" height="128"></resolution>
+				<particles count="500"></particles>
+				
+				<speed value="1.5" variance="0.0"></speed>
+				<amplitude value="4" variance="0.2"></amplitude>
+				<radius value="8" variance="0.0"></radius>
+				<wavewidth value="0.2" variance="0.75"></wavewidth>
+				
+				<numQuads value="128"></numQuads>
+				<triangleSize value="10"></triangleSize>
+				<timePeriod value="1500"></timePeriod>
+				
+				<detailBlendMapName value="blendMap.png"></detailBlendMapName>
+				<detailBlendMapUVScale value="1"></detailBlendMapUVScale>
+				
+				<detailMapUVScale1 value="15"></detailMapUVScale1>
+				<detailHeightScale1 value="1.5"></detailHeightScale1>
+				<detailHeightMapName1 value="waterHeight.png"></detailHeightMapName1>
+				<detailNormalMapName1 value="waterNormal.png"></detailNormalMapName1>
+				
+				<detailMapUVScale2 value="30"></detailMapUVScale2>
+				<detailHeightScale2 value="0.5"></detailHeightScale2>
+				<detailHeightMapName2 value="waterFoam.png"></detailHeightMapName2>
+				<detailNormalMapName2 value="DynamicHeightmapNoise_Normal2.png"></detailNormalMapName2>
+			</oceanComponent>
+            <renderComponent>
+                <shader>
+                    <vertexShader source="water"></vertexShader>
+                    <tessellationControlShader source="water">
+                        <parameters>
+                            <nTessellationFactor>40</nTessellationFactor>
+                        </parameters>
+                    </tessellationControlShader>
+					<tessellationEvalShader source="water">
+                        <parameters>
+                            <nPatchesPerDim>128</nPatchesPerDim>
+                        </parameters>
+					</tessellationEvalShader>
+                    <fragmentShader source="water"></fragmentShader>
+                </shader>
+            </renderComponent>
+        </components>
+        
+    </actor>
+</root>

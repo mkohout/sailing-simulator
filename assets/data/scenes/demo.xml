@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+	<scene>
+        <sounds>
+            <sound identifier="background"></sound>
+            <sound identifier="wind"></sound>
+        </sounds>
+        
+		<sceneGroup title="Virtual Universe">
+            <sceneGroup title="Sailing Boat">
+                
+                <position x="5.0" y="1.0" z="5.0"></position>
+                
+                <actor identifier="sailingBoat" mainActor="true">
+                    <position x="0.0" y="0.0" z="0.0"></position>
+                </actor>
+                 
+                <actor identifier="mainboom" >
+                     <position x="-0.2" y="0.3" z="0.3"></position>
+                </actor>
+                
+                <actor identifier="mainSail" >
+                    <position x="0.0" y="0.0" z="0.0"></position>
+                </actor>
+
+                <actor identifier="headSail">
+                    <position x="0.0" y="0.0" z="0.0"></position>
+                </actor>
+            </sceneGroup>
+
+            <sceneGroup title="Water">
+                <actor identifier="water">
+					<scale x="1000" z="1000"></scale>
+                    <position x="-500.0" y="0.0" z="-500.0"></position>
+                </actor>
+            </sceneGroup>
+			
+			<sceneGroup title="Stuff">
+				<actor identifier="buoy">
+				</actor>
+            </sceneGroup>
+			
+            <cameraNode>
+                <maxZoomDistance value="500"></maxZoomDistance>
+                <movingSpeed value="10.0f"></movingSpeed>
+                <up x="0.0" y="1.0" z="0.0"></up>
+                <position x="-55.0" y="40.0" z="-55.0"></position>
+                <nearClippingPlane value="0.1"></nearClippingPlane>
+                <farClippingPlane value="50000.0"></farClippingPlane>
+                <fieldOfView value="40.0"></fieldOfView>
+            </cameraNode>
+
+            <skyNode>
+                <actor identifier="skybox">
+                    <position x="0.0" y="0.0" z="0.0"></position>
+                </actor>
+            </skyNode>
+		
+            <lightNode type="directionalLight">
+                <direction x="-0.887" y="-0.45" z="0.46"></direction>
+                <energy value="1.0"></energy>
+                <color r="1.0" g="1.0" b="1.0"></color>
+            </lightNode>
+        </sceneGroup>
+        
+        <forces>
+            <force title="wind" type="dynamic" effect="area" massIndependent="0">
+                <direction x="0.0" y="0.0" z="1.0"></direction>
+                <strength value="10.0" max="30"></strength>
+                <dynamic>
+                    <strength noise="0.1"></strength>
+                    <!-- Rotate with 1.2° per second -->
+                    <rotate speed="1.2"></rotate>
+                </dynamic>
+            </force>
+            
+            <force title="airstream" type="dynamic" effect="area" massIndependent="0">
+                <strength value="1.0"></strength>
+                <direction x="-1.0" y="0.0" z="0.0"></direction>
+                <dynamic>
+                    <dependentOnActor identifier="sailingBoat"></dependentOnActor>
+                </dynamic>
+            </force>
+            
+            <force title="gravity" type="static" effect="particle" massIndependent="1">
+                <direction x="0.0" y="-1.0" z="0.0"></direction>
+                <strength value="9.81"></strength>
+            </force>
+        </forces>
+	</scene>
+</root>

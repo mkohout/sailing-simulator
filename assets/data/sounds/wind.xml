@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <sound file="wind.wav" loop="1" noDuplicates="1" volume="0.1">
+    </sound>
+</root>

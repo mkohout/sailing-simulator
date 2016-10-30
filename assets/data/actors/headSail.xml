@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <actor>
+        
+        <components>
+            <renderComponent>
+                <shader>
+                    <vertexShader source="default"></vertexShader>
+                    <fragmentShader source="default"></fragmentShader>
+                </shader>
+                <textures>
+                    <texture source="sail.png"></texture>
+                </textures>
+            </renderComponent>
+            <clothComponent>
+                <renderMaterial name="sail"></renderMaterial>
+                <totalMass value="15.0"></totalMass>
+                <constraintIterations value="40"></constraintIterations>
+                <damping value="-0.05"></damping>
+                <springs>
+                    <structural kd="-25.0f" ks="5500.0f"></structural>
+                    <bending kd="-25.0f" ks="25.0f"></bending>
+                    <shearing kd="-25.0f" ks="25.0f"></shearing>
+                </springs>
+                <numParticles>
+                    <width value="10" />
+                    <height value="10" />
+                </numParticles>
+                <fixedPoints>
+                    <fixedPoint x="0" y="0" />
+                    <fixedPoint x="9" y="0" />
+                    <fixedPoint x="9" y="9" />
+                </fixedPoints>
+                <vertices>
+                    <vertex x="4.066" y="4.674" z="-0.43" /> <!-- lower left -->
+                    <vertex x="3.63" y="25.285" z="-0.05" /> <!-- upper left -->
+                    <vertex x="10.6" y="4.35" z="-0.15" /> <!-- lower right -->
+                    <vertex x="3.65" y="25.285" z="0.02" /> <!-- upper right -->
+                </vertices>
+            </clothComponent>
+            <sailComponent>
+                <towPoint x="3.0" y="2.0" z="-5.0"></towPoint>
+                <applyForceTo name="sailingBoat"></applyForceTo>
+            </sailComponent>
+        </components>
+        
+    </actor>
+</root>

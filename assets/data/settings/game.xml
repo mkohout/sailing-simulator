@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+	<gameTitle>Cast Off!</gameTitle>
+	
+	<firstScene>demo</firstScene>
+    
+    <windowMode>window</windowMode>
+	
+	<maxFrameRate>60</maxFrameRate>
+	<inputRate>15</inputRate>
+    <soundRate>30</soundRate>
+    <physicsRate>30</physicsRate>
+	<simulationRate>30</simulationRate>
+	
+	<defaultVertexShader></defaultVertexShader>
+	<defaultFragmentShader></defaultFragmentShader>
+	<defaultMaterial>defaultMaterial</defaultMaterial>
+</root>

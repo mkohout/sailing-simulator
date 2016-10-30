@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+    <actor>
+        <components>
+            <renderComponent>
+                <geometry source="skybox.obj"></geometry>
+                <shader>
+                    <vertexShader source="skybox"></vertexShader>
+                    <fragmentShader source="skybox"></fragmentShader>
+                </shader>
+                <textures>
+                    <texture source="skybox/posx.png" type="cubemap"></texture>
+                    <texture source="skybox/negx.png" type="cubemap"></texture>
+					<texture source="skybox/negy.png" type="cubemap"></texture>
+                    <texture source="skybox/posy.png" type="cubemap"></texture>
+                    <texture source="skybox/posz.png" type="cubemap"></texture>
+                    <texture source="skybox/negz.png" type="cubemap"></texture>
+                </textures>
+            </renderComponent>
+        </components>
+        
+    </actor>
+</root>

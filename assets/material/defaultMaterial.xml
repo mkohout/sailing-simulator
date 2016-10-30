@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<root>
+	<material>
+		<ambientColor r="0" g="0" b="0"></ambientColor>
+		<diffuseColor r="0.64" g="0.0" b="0.605401"></diffuseColor>
+		<specularColor r="1.0" g="1.0" b="1.0"></specularColor>
+		<specularExponent value="96.078431"></specularExponent>
+		<transparency value="0.0"></transparency>
+        <textures></textures>
+	</material>
+</root>
